@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Edit Task</h2>
+<form action="/edit/{{ task.id }}" method="post" id="edit-task-form">
+    <label>Title</label>
+    <input type="text" name="title" id="title" value="{{ task.title }}" required>
+    <label>Description</label>
+    <textarea name="description" id="description" rows="4">{{ task.description }}</textarea>
+    <label>Status</label>
+    <select name="status" id="status">
+        <option value="pending" {% if task.status == 'pending' %}selected{% endif %}>Pending</option>
+        <option value="completed" {% if task.status == 'completed' %}selected{% endif %}>Completed</option>
+    </select>
+    <button type="submit" class="btn btn-primary" id="update-btn">Update Task</button>
+</form>
+{% endblock %}

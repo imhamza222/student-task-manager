@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        nav a { margin-right: 15px; text-decoration: none; color: #007bff; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+        th { background: #f4f4f4; }
+        .btn { padding: 6px 12px; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; }
+        .btn-primary { background: #007bff; color: white; }
+        .btn-danger { background: #dc3545; color: white; }
+        .btn-warning { background: #ffc107; color: black; }
+        input, textarea, select { padding: 8px; width: 100%; margin: 5px 0 15px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 4px; }
+        .badge-pending { color: orange; } .badge-completed { color: green; }
+    </style>
+</head>
+<body>
+    <h1>📚 Student Task Manager</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/add">Add Task</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
